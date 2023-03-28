@@ -22,7 +22,7 @@ namespace CleanArc.GenerateCode.Presentation.Generators
                 $"using Application.Handlers.{entity.Name}.Query;",
                 $"using Application.Handlers.{entity.Name}.Update;",
                 "",
-                $"using Contracts.Entity.{entity.Name};",
+                "using Contracts.Entity;",
                 "",
                 "using Mapster;",
                 "",

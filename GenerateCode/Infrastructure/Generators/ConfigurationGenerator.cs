@@ -18,6 +18,7 @@ namespace CleanArc.GenerateCode.Infrastructure.Generators
                 "using Domain.Entity;",
                 "using Microsoft.EntityFrameworkCore;",
                 "using Microsoft.EntityFrameworkCore.Metadata.Builders;",
+                "using Infrastructure.Data;",
                 "",
                 "namespace Infrastructure.Configurations",
                 "{",

@@ -1,15 +1,10 @@
-﻿using CleanArc.Models;
-
-namespace CleanArc.GenerateCode.Infrastructure.Generators
+﻿namespace CleanArc.GenerateCode.Infrastructure.Generators
 {
     internal class OutboxMessageConfigurationGenerator : FileGenerator
     {
-        private readonly SolutionModel solution;
-
-        public OutboxMessageConfigurationGenerator(string path, SolutionModel solution)
+        public OutboxMessageConfigurationGenerator(string path)
             : base(path, "OutboxMessageConfiguration.cs")
         {
-            this.solution = solution;
         }
 
         protected override List<string> Generate()
@@ -21,13 +16,13 @@ namespace CleanArc.GenerateCode.Infrastructure.Generators
                 "",
                 "namespace Infrastructure.Data.Outbox",
                 "{",
-                $"    internal sealed class {solution.Name}OutboxMessageConfiguration",
-                $"        : IEntityTypeConfiguration<{solution.Name}OutboxMessage>",
+                "    internal sealed class OutboxMessageConfiguration",
+                "        : IEntityTypeConfiguration<OutboxMessage>",
                 "    {",
-                $"        public void Configure(EntityTypeBuilder<{solution.Name}OutboxMessage> modelBuilder)",
+                "        public void Configure(EntityTypeBuilder<OutboxMessage> modelBuilder)",
                 "        {",
                 "            modelBuilder",
-                $"                .ToTable(TableNames.{solution.Name}OutboxMessages);",
+                "                .ToTable(TableNames.OutboxMessages);",
                 "",
                 "            modelBuilder",
                 "                .HasKey(x => x.Id);",

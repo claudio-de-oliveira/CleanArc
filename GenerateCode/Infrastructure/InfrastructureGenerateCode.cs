@@ -30,9 +30,9 @@ namespace CleanArc.GenerateCode.Infrastructure
             new EmailSenderGenerator(Path.Combine(path, "Email")).CreateFile();
 
             new ProcessOutboxMessagesJobGenerator(Path.Combine(path, "Outbox"), solution).CreateFile();
-            new OutboxMessageConfigurationGenerator(Path.Combine(path, "Data\\Outbox"), solution).CreateFile();
-            new OutboxMessageGenerator(Path.Combine(path, "Outbox"), solution).CreateFile();
-            new OutboxMessageConsumerGenerator(Path.Combine(path, "Outbox"), solution).CreateFile();
+            new OutboxMessageConfigurationGenerator(Path.Combine(path, "Data\\Outbox")).CreateFile();
+            new OutboxMessageGenerator(Path.Combine(path, "Outbox")).CreateFile();
+            new OutboxMessageConsumerGenerator(Path.Combine(path, "Outbox")).CreateFile();
 
             var pth = Path.Combine(path, "Data");
             new DataTableNamesGenerator(pth, solution).CreateFile();

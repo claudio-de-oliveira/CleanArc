@@ -1,14 +1,10 @@
-﻿using CleanArc.Models;
-
-namespace CleanArc.GenerateCode.Infrastructure.Generators
+﻿namespace CleanArc.GenerateCode.Infrastructure.Generators
 {
     internal class OutboxMessageGenerator : FileGenerator
     {
-        private readonly SolutionModel solutionModel;
-        public OutboxMessageGenerator(string path, SolutionModel solutionModel)
+        public OutboxMessageGenerator(string path)
             : base(path, "OutboxMessage.cs")
         {
-            this.solutionModel = solutionModel;
         }
 
         protected override List<string> Generate()
@@ -16,7 +12,7 @@ namespace CleanArc.GenerateCode.Infrastructure.Generators
             {
                 "namespace Infrastructure.Outbox",
                 "{",
-                $"    public sealed class {solutionModel.Name}OutboxMessage",
+                "    public sealed class OutboxMessage",
                 "    {",
                 "        public Guid Id { get; set; }",
                 "        public string Type { get; set; } = string.Empty;",

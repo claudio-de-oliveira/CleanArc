@@ -18,10 +18,8 @@ namespace CleanArc.GenerateCode.Infrastructure.Generators
         {
             var lines = new List<string>()
             {
-                "using Application.Interfaces;",
                 "using Infrastructure.Data;",
                 "using Infrastructure.Options;",
-                "using Infrastructure.Persistence;",
                 "using Ardalis.GuardClauses;",
                 "using Infrastructure.Interceptors;",
                 "using Quartz;",
@@ -34,11 +32,14 @@ namespace CleanArc.GenerateCode.Infrastructure.Generators
                 "using Microsoft.EntityFrameworkCore;",
                 "using Microsoft.Extensions.Configuration;",
                 "using Microsoft.Extensions.DependencyInjection;",
-                "using Microsoft.Extensions.Options;",
                 "",
                 "using Serilog;",
                 "using Serilog.Events;",
                 "using Serilog.Sinks.SystemConsole.Themes;",
+
+                "using Domain.Email;",
+                "using Application.Interfaces.Email;",
+                "using Microsoft.AspNetCore.Http.Features;",
                 "",
                 "using System.Reflection;",
                 "",

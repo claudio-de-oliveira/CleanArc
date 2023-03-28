@@ -23,6 +23,8 @@
                 "        <PackageReference Include=\"MediatR\" Version=\"11.1.0\" />",
                 "        <PackageReference Include=\"ErrorOr\" Version=\"1.2.1\" />",
                 "        <PackageReference Include=\"Serilog\" Version=\"2.12.0\" />",
+                "        <PackageReference Include=\"NETCore.MailKit\" Version=\"2.1.0\" />",
+                "        <PackageReference Include=\"Microsoft.AspNetCore.Http.Features\" Version=\"5.0.17\" />",
                 "    </ItemGroup>",
                 "",
                 "</Project>",
